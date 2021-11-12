@@ -1,7 +1,7 @@
 #theme:
 title: Website
-description: Website description
-url: https://ecmajs.github.io/ecmajs-auth-for-static-website-jekyll/
+description: ecmajs-auth-for-static-website-jekyll
+url: https://ecmajs.github.io
 author: EcmaJS
 #google_analytics: 
 plugins:  
