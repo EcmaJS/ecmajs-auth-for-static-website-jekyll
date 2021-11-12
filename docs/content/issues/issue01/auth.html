@@ -6,12 +6,12 @@
     <script type="text/javascript" src="script.min.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body onload="initEvent()">
     <div class="authForm" id="authForm">
-      <div class='title'>Авторизация</div>
+      <div class='title'>Авторизация v. 001</div>
       <input placeholder="Логин" required id='loginAuth'></input>
       <input placeholder="Пароль" required id='passwordAuth'></input>
-      <button class="auth-btn" onclick="authenticate()">Вход</button>
+      <button id="auth-go-to" class="auth-btn" onclick="authenticate()">Вход</button>
     </div>
   </body>
 </html>
