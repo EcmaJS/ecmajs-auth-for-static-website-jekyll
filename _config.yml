@@ -3,6 +3,6 @@ title: Website
 description: ecmajs-auth-for-static-website-jekyll
 url: https://ecmajs.github.io
 author: EcmaJS
-#google_analytics: 
+google_analytics: UA-212804240-1
 plugins:  
   - jekyll-seo-tag
