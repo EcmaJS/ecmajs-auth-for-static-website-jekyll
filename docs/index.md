@@ -1,5 +1,5 @@
-Readme
+Home
 
-### Issues
+### Home 
 
-[Go to Issue - 01](./content/issues/issue01/auth.html)
+[Content](./website/app/pages/content/index.html)
