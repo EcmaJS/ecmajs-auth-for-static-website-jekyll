@@ -19,4 +19,4 @@ $(document).ready(function() {
       alert(textStatus);
     });
   })
-}
+})
