@@ -1,3 +1,5 @@
+import $ from 'jQuery';
+
 $(document).ready(function() {
   $('#auth-go-to').on('click', function(){
     $.ajax({
