@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="auth-form_html-container" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authorization before reading a post</title>
+    <script type="text/javascript" src="./script.min.js"></script>
+    <link rel="stylesheet" href="/website/assets/styles/css/index.css">
+  </head>
+  <body class="auth-form__body" onload="initEvent()">
+    <div class="authForm" id="authForm">
+      <div class='title'>Авторизация v. 002</div>
+      <input placeholder="Логин" required id='loginAuth'></input>
+      <input placeholder="Пароль" required id='passwordAuth'></input>
+      <button id="auth-go-to" class="auth-btn" onclick="authenticate()">Вход</button>
+    </div>
+  </body>
+</html>
