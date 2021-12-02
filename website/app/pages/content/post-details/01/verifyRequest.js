@@ -1,4 +1,4 @@
-$(document).ready(function() {
+async function testRequest(){
   const secret = "ZjgyNjkwMDAtNGM3MS00ODA5LTgyNjEtMDA4YzVjY2E3MGJmNjM3NzM1OTQ4Mzk2Nzg5Nzkx"
 
   const request = await fetch('https://app.snipcart.com/api/orders', {
@@ -28,4 +28,4 @@ $(document).ready(function() {
   //     alert(textStatus);
   //   });
   // })
-})
+}
