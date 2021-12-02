@@ -13,20 +13,15 @@ async function checkRequest(){
     })
     const result = await request.json();
     if (email === result.email && token === result.token) {
-      const orders = [];
+      const existingOrders = JSON.parse(localStorage.getItem("allOrders"));
+      if (existingOrders == null) existingOrders = [];
       const order = {
-        email: email,
-        token: token
-      };
-      if (!localStorage.getItem('orders')) {
-        localStorage.setItem("orders", JSON.stringify(orders));
-        const localStorageOrders = JSON.parse(localStorage.getItem("orders"));
-        localStorageOrders.push(order);
+        "email": email,
+        "token": token
       }
-      else {
-        const localStorageOrders = JSON.parse(localStorage.getItem("orders"));
-        localStorageOrders.push(order);
-      }
+      localStorage.setItem("order", JSON.stringify(order));
+      existingOrders.push(order);
+      localStorage.setItem("allOrders", JSON.stringify(existingOrders));
       window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
     }
     else {
