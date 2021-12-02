@@ -15,9 +15,9 @@ async function checkRequest(){
     if (email === result.email && token === result.token) {
       let str = '';
       str = 'Post 01'
+      window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
       document.getElementById('page-01').innerHTML += str;
       // alert('Успешно!');
-      window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
     }
     else {
       alert('Вы ввели неверные данные');
