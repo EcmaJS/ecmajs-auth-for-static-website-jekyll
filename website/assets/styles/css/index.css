@@ -171,6 +171,10 @@ subheader > #breadcrumbs > a:visited {
   padding: 20px;
 }
 
+.authForm > .title {
+  margin-bottom: 15px
+}
+
 .auth-btn {
   background: #fff;
   border: none;

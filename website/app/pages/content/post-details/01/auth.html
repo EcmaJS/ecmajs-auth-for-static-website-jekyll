@@ -11,9 +11,9 @@
   <body class="auth-form__body" onload="initEvent()">
     <div class="authForm" id="authForm">
       <div class='title'>Авторизация v. 002</div>
-      <input placeholder="Электронная почта" id='emailAuth'></input>
+      <input placeholder="Электронная почта" required id='emailAuth'></input>
       <input placeholder="Токен покупки" required id='tokenAuth'></input>
-      <button id="auth-go-to" class="auth-btn" onclick="testRequest()">Вход</button>
+      <button id="auth-go-to" class="auth-btn" onclick="checkData()">Вход</button>
     </div>
   </body>
 </html>
