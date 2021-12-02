@@ -13,11 +13,19 @@ async function checkRequest(){
     })
     const result = await request.json();
     if (email === result.email && token === result.token) {
-      let str = '';
-      str = 'Post 01'
+      const orders = [];
+      const order = {
+        email: email,
+        token: token
+      };
+      if (!localStorage.getItem('orders')) {
+        localStorage.setItem("orders", JSON.stringify(orders));
+        JSON.parse(localStorage.getItem("orders")).push(order);
+      }
+      else {
+        JSON.parse(localStorage.getItem("orders")).push(order);
+      }
       window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
-      document.getElementById('page-01').innerHTML += str;
-      // alert('Успешно!');
     }
     else {
       alert('Вы ввели неверные данные');
@@ -26,4 +34,8 @@ async function checkRequest(){
   else {
     alert('Вы заполнили не все поля');
   }
+}
+
+function checkData() {
+  console.log('page has been loaded');
 }
