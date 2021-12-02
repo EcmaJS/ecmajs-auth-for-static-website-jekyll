@@ -13,7 +13,7 @@ async function checkRequest(){
     })
     const result = await request.json();
     if (email === result.email && token === result.token) {
-      const existingOrders = JSON.parse(localStorage.getItem("allOrders"));
+      let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
       if (existingOrders == null) existingOrders = [];
       const order = {
         "email": email,
