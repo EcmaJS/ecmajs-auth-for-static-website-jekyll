@@ -1,5 +1,5 @@
 async function testRequest(){
-  const secret = "ZjgyNjkwMDAtNGM3MS00ODA5LTgyNjEtMDA4YzVjY2E3MGJmNjM3NzM1OTQ4Mzk2Nzg5Nzkx"
+  const secret = "ST_MzdjYzYwN2EtZTIyNy00MjZkLTk3MGMtYzY3ODg3NjBjNzg0NjM3NzM1OTYyNTY5NjM2MzY5"
 
   const request = await fetch('https://app.snipcart.com/api/orders', {
       headers: {
