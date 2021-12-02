@@ -20,10 +20,11 @@ async function checkRequest(){
       };
       if (!localStorage.getItem('orders')) {
         localStorage.setItem("orders", JSON.stringify(orders));
-        JSON.parse(localStorage.getItem("orders")).push(order);
+        const localStorageOrders = JSON.parse(localStorage.getItem("orders"));
+        localStorageOrders.push(order);
       }
       else {
-        JSON.parse(localStorage.getItem("orders")).push(order);
+        localStorageOrders.push(order);
       }
       window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
     }
