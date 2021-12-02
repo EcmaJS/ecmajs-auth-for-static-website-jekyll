@@ -19,9 +19,10 @@ async function checkRequest(){
         "email": email,
         "token": token
       }
-      localStorage.setItem("order", JSON.stringify(order));
-      existingOrders.push(order);
-      localStorage.setItem("allOrders", JSON.stringify(existingOrders));
+      if (!existingOrders.find(item => item.token === token)) {
+        existingOrders.push(order);
+        localStorage.setItem("allOrders", JSON.stringify(existingOrders));
+      }
       window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
     }
     else {
