@@ -24,6 +24,7 @@ async function checkRequest(){
         localStorageOrders.push(order);
       }
       else {
+        const localStorageOrders = JSON.parse(localStorage.getItem("orders"));
         localStorageOrders.push(order);
       }
       window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
