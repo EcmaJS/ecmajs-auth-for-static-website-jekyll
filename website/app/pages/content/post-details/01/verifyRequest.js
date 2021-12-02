@@ -34,6 +34,19 @@ async function checkRequest(){
   }
 }
 
-function checkData() {
-  console.log('page has been loaded');
+async function checkData() {
+  const request = await fetch(`${GET_ORDER_URL}${token}`, {
+    headers: {
+      'Authorization': `Basic ${btoa(API_KEY)}`,
+      'Accept': 'application/json'
+    }
+  })
+  const result = await request.json();
+  let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
+  if (existingOrders.find(item => item.token === result.token && item.email === result.email)) {
+    console.log('page has been loaded');
+  }
+  else {
+    window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+  }
 }
