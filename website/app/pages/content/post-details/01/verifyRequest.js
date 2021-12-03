@@ -38,6 +38,7 @@ async function checkRequest(){
 async function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
   if (existingOrders.find(item => item.items.find(elem => elem.id === itemId))) {
+    console.log(item, elem, itemId);
     const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
       headers: {
         'Authorization': `Basic ${btoa(API_KEY)}`,
@@ -46,6 +47,7 @@ async function checkData(itemId) {
     })
     const result = await request.json();
     const checkToken = result.token;
+    console.log(checkToken, result.token);
     if (existingOrders.find(order => order.token == checkToken)) {
       console.log('page has been loaded');
     }
