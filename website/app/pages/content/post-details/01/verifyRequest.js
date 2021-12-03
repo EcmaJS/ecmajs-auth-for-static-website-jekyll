@@ -41,7 +41,6 @@ async function checkData(itemId, backUrl) {
     for (order of existingOrders) {
       if (order.items.find(item => item.id == itemId)) {
         const item = (order.items.find(item => item.id == itemId));
-        localStorage.setItem('item', item);
         const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
           headers: {
             'Authorization': `Basic ${btoa(API_KEY)}`,
@@ -49,7 +48,6 @@ async function checkData(itemId, backUrl) {
           }
         })
         const result = await request.json();
-        localStorage.setItem('result', result);
         if (existingOrders.find(elem => elem.token == result.token)) {
           console.log('Page has been loaded!');
         }
