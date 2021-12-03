@@ -51,7 +51,7 @@ function checkData(itemId) {
     existingOrders.forEach((order) => {
       if (order.items.find(item => item.id == itemId)) {
         const result = requestOrder();
-        if (existingOrders.find(elem => elem.token == result.result.token)) {
+        if (existingOrders.find(elem => elem.token == result.token)) {
           console.log('page has been loaded');
         }
         else {
