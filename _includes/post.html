@@ -6,5 +6,7 @@
     {{ post.description }}
   </div>
   <a href="{{ post.link }}">Read more</a>
-  {% include buybtn.html %}
+  {% if post.isNotFree %}
+    {% include buybtn.html %}
+  {% endif %}
 </div>
