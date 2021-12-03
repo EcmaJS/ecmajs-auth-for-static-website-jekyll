@@ -5,8 +5,10 @@
   <div class="note__description">
     {{ post.description }}
   </div>
-  <a href="{{ post.link }}">Открыть запись</a>
-  {% if post.isNotFree %}
-    {% include buybtn.html %}
-  {% endif %}
+  <div class="post-buttons__container">
+    <a class="contain__button" href="{{ post.link }}">Открыть запись</a>
+    {% if post.isNotFree %}
+      {% include buybtn.html %}
+    {% endif %}
+  </div>
 </div>
