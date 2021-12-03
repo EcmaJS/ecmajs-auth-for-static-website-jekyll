@@ -59,8 +59,11 @@ function checkData(itemId) {
         }
       }
       else {
-        window.location.href = 'https://dover.ecmajs.dev';
+        window.location.href = 'https://dover.ecmajs.dev/website';
       }
     });
+  }
+  else {
+    window.location.href = 'https://dover.ecmajs.dev';
   }
 }
