@@ -59,7 +59,7 @@ function checkData(itemId) {
         }
       }
       else {
-        window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+        window.location.href = 'https://dover.ecmajs.dev';
       }
     });
   }
