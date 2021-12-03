@@ -8,7 +8,8 @@ async function requestOrder(token) {
       'Accept': 'application/json'
     }
   })
-  return await request.json()
+  const result = await request.json()
+  return result;
 }
 
 async function checkRequest(){
