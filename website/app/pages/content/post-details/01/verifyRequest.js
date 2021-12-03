@@ -37,22 +37,43 @@ async function checkRequest(){
 
 async function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
-  if (existingOrders.find(item => item.items.find(elem => elem.id === itemId))) {
-    console.log(item, elem, itemId);
-    const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
-      headers: {
-        'Authorization': `Basic ${btoa(API_KEY)}`,
-        'Accept': 'application/json'
+  existingOrders.forEach((order) => {
+    if (order.items.find(item => item.id === itemId)) {
+      const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
+        headers: {
+          'Authorization': `Basic ${btoa(API_KEY)}`,
+          'Accept': 'application/json'
+        }
+      })
+      const result = await request.json();
+      if (existingOrders.find(elem => elem.token == result.token)) {
+        console.log('page has been loaded');
       }
-    })
-    const result = await request.json();
-    const checkToken = result.token;
-    console.log(checkToken, result.token);
-    if (existingOrders.find(order => order.token == checkToken)) {
-      console.log('page has been loaded');
+      else {
+        window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+      }
     }
-  }
-  else {
-    window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
-  }
+    else {
+      window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+    }
+  });
+
+  // if (existingOrders.find(item => item.items) {
+  //   console.log(item, itemId);
+  //   const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
+  //     headers: {
+  //       'Authorization': `Basic ${btoa(API_KEY)}`,
+  //       'Accept': 'application/json'
+  //     }
+  //   })
+  //   const result = await request.json();
+  //   const checkToken = result.token;
+  //   console.log(checkToken, result.token);
+  //   if (existingOrders.find(order => order.token == checkToken)) {
+  //     console.log('page has been loaded');
+  //   }
+  // }
+  // else {
+    // window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+  // }
 }
