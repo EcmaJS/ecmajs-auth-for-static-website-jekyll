@@ -46,7 +46,8 @@ async function checkData(itemId) {
     })
     const result = await request.json();
   }
-  if (existingOrders.find(order => order.token === result.token)) {
+  const checkToken = result.token;
+  if (existingOrders.find(order => order.token === checkToken)) {
     console.log('page has been loaded');
   }
   else {
