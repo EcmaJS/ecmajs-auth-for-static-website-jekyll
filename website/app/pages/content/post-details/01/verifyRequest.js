@@ -37,7 +37,7 @@ async function checkRequest(){
 
 async function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
-  if (existingOrders.find(item => item.items.find(elem => elem.id === itemId)) {
+  if (existingOrders.find(item => item.items.find(elem => elem.id === itemId))) {
     const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
       headers: {
         'Authorization': `Basic ${btoa(API_KEY)}`,
