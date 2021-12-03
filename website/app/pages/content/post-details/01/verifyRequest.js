@@ -17,7 +17,8 @@ async function checkRequest(){
       if (existingOrders == null) existingOrders = [];
       const order = {
         "email": email,
-        "token": token
+        "token": token,
+        "items": result.items
       }
       if (!existingOrders.find(item => item.token === token)) {
         existingOrders.push(order);
