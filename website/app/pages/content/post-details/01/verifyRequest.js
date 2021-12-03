@@ -8,7 +8,7 @@ async function requestOrder(token) {
       'Accept': 'application/json'
     }
   })
-  return result = await request.json()
+  return await request.json()
 }
 
 function checkRequest(){
