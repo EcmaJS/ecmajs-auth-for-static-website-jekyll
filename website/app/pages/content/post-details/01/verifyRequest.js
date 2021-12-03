@@ -48,8 +48,10 @@ async function checkRequest(){
 function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
   existingOrders.forEach((order) => {
+    console.log(orders);
     if (order.items.find(item => item.id === itemId)) {
       const result = requestOrder();
+      console.log(result);
       if (existingOrders.find(elem => elem.token == result.result.token)) {
         console.log('page has been loaded');
       }
