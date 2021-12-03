@@ -40,7 +40,7 @@ async function checkData(itemId) {
   if (existingOrders) {
     for (order of existingOrders) {
       if (order.items.find(item => item.id == itemId)) {
-        const request = await fetch(`${GET_ORDER_URL}${token}`, {
+        const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
           headers: {
             'Authorization': `Basic ${btoa(API_KEY)}`,
             'Accept': 'application/json'
