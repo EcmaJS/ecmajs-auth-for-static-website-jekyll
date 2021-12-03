@@ -51,6 +51,7 @@ function checkData(itemId) {
     existingOrders.forEach((order) => {
       if (order.items.find(item => item.id == itemId)) {
         const result = requestOrder();
+        localStorage.setItem('result', result);
         if (existingOrders.find(elem => elem.token == result.token)) {
           console.log('page has been loaded');
         }
