@@ -15,7 +15,7 @@ function checkRequest(){
   const email = document.getElementById('emailAuth').value;
   const token = document.getElementById('tokenAuth').value;
   if (email && token) {
-    requestOrder(token);
+    const result = requestOrder(token);
     if (email === result.email && token === result.token) {
       let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
       if (existingOrders == null) existingOrders = [];
@@ -43,7 +43,7 @@ function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
   existingOrders.forEach((order) => {
     if (order.items.find(item => item.id === itemId)) {
-      requestOrder();
+      const result = requestOrder();
       if (existingOrders.find(elem => elem.token == result.token)) {
         console.log('page has been loaded');
       }
