@@ -45,10 +45,10 @@ async function checkData(itemId) {
       }
     })
     const result = await request.json();
-  }
-  const checkToken = result.token;
-  if (existingOrders.find(order => order.token === checkToken)) {
-    console.log('page has been loaded');
+    const checkToken = result.token;
+    if (existingOrders.find(order => order.token === checkToken)) {
+      console.log('page has been loaded');
+    }
   }
   else {
     window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
