@@ -35,16 +35,18 @@ async function checkRequest(){
   }
 }
 
-async function checkData() {
-  const request = await fetch(`${GET_ORDER_URL}${token}`, {
-    headers: {
-      'Authorization': `Basic ${btoa(API_KEY)}`,
-      'Accept': 'application/json'
-    }
-  })
-  const result = await request.json();
+async function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
-  if (existingOrders.find(item => item.token === result.token && item.email === result.email)) {
+  if (existingOrders.find(item => item.items.find(elem => elem.id === itemId)){
+    const request = await fetch(`${GET_ORDER_URL}${item.token}`, {
+      headers: {
+        'Authorization': `Basic ${btoa(API_KEY)}`,
+        'Accept': 'application/json'
+      }
+    })
+    const result = await request.json();
+  }
+  if (existingOrders.find(order => order.token === result.token)) {
     console.log('page has been loaded');
   }
   else {
