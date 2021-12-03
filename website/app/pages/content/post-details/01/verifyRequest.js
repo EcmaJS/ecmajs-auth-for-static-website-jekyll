@@ -51,18 +51,18 @@ async function checkData(itemId) {
         const result = await request.json();
         localStorage.setItem('result', result);
         if (existingOrders.find(elem => elem.token == result.token)) {
-          console.log('page has been loaded');
+          console.log('Page has been loaded!');
         }
         else {
           window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
         }
       }
       else {
-        window.location.href = 'https://dover.ecmajs.dev/website';
+        window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
       }
     };
   }
   else {
-    window.location.href = 'https://dover.ecmajs.dev';
+    window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
   }
 }
