@@ -11,11 +11,17 @@ async function requestOrder(token) {
   return await request.json()
 }
 
-function checkRequest(){
+async function checkRequest(){
   const email = document.getElementById('emailAuth').value;
   const token = document.getElementById('tokenAuth').value;
   if (email && token) {
-    const result = requestOrder(token);
+    const request = await fetch(`${GET_ORDER_URL}${token}`, {
+      headers: {
+        'Authorization': `Basic ${btoa(API_KEY)}`,
+        'Accept': 'application/json'
+      }
+    })
+    const result =  await request.json()
     if (email === result.email && token === result.token) {
       let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
       if (existingOrders == null) existingOrders = [];
@@ -44,7 +50,7 @@ function checkData(itemId) {
   existingOrders.forEach((order) => {
     if (order.items.find(item => item.id === itemId)) {
       const result = requestOrder();
-      if (existingOrders.find(elem => elem.token == result.token)) {
+      if (existingOrders.find(elem => elem.token == result.result.token)) {
         console.log('page has been loaded');
       }
       else {
