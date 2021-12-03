@@ -49,7 +49,7 @@ function checkData(itemId) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
   if (existingOrders) {
     existingOrders.forEach((order) => {
-      if (order.items.find(item => item.id === itemId)) {
+      if (order.items.find(item => item.id == itemId)) {
         const result = requestOrder();
         if (existingOrders.find(elem => elem.token == result.result.token)) {
           console.log('page has been loaded');
