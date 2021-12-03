@@ -1,7 +1,7 @@
 API_KEY = "ST_MzdjYzYwN2EtZTIyNy00MjZkLTk3MGMtYzY3ODg3NjBjNzg0NjM3NzM1OTYyNTY5NjM2MzY5"
 GET_ORDER_URL = "https://app.snipcart.com/api/orders/"
 
-async function checkRequest(){
+async function checkRequest(authUrl){
   const email = document.getElementById('emailAuth').value;
   const token = document.getElementById('tokenAuth').value;
   if (email && token) {
@@ -24,7 +24,7 @@ async function checkRequest(){
         existingOrders.push(order);
         localStorage.setItem("allOrders", JSON.stringify(existingOrders));
       }
-      window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/'
+      window.location.href = authUrl;
     }
     else {
       alert('Вы ввели неверные данные');
@@ -35,7 +35,7 @@ async function checkRequest(){
   }
 }
 
-async function checkData(itemId) {
+async function checkData(itemId, backUrl) {
   let existingOrders = JSON.parse(localStorage.getItem("allOrders"));
   if (existingOrders) {
     for (order of existingOrders) {
@@ -54,15 +54,15 @@ async function checkData(itemId) {
           console.log('Page has been loaded!');
         }
         else {
-          window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+          window.location.href = backUrl;
         }
       }
       else {
-        window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+        window.location.href = backUrl;
       }
     };
   }
   else {
-    window.location.href = 'https://dover.ecmajs.dev/website/app/pages/content/post-details/01/auth.html';
+    window.location.href = backUrl;
   }
 }
