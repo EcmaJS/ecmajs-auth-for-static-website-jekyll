@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="auth-form_html-container" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authorization before reading a post</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.min.js"></script>
+    <script type="text/javascript" src="/website/services/verifyRequest.min.js"></script>
+    <link rel="stylesheet" href="/website/assets/styles/css/index.css">
+  </head>
+  <body class="auth-form__body" onload="initEvent()">
+    <div class="authForm" id="authForm">
+      <div class='title'>Авторизация v. 002</div>
+      <input placeholder="Электронная почта" required id='emailAuth'></input>
+      <input placeholder="Токен покупки" required id='tokenAuth'></input>
+      <button id="auth-go-to" class="auth-btn" onclick="checkRequest('https://dover.ecmajs.dev/website/app/pages/content/post-details/01/')">Вход</button>
+    </div>
+  </body>
+</html>

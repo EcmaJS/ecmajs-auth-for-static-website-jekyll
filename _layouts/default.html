@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   <meta http-equiv="Content-Type" content="application/json; charset=utf-8">
+  <head>
+    <link type="text/css" rel="stylesheet" href="bower_components/lightgallery.js/dist/css/lightgallery.css" />
+  </head>
   <body>
     {% include header.html %}
     <header>
@@ -18,5 +21,8 @@
   <link rel="stylesheet" href="/website/assets/styles/css/index.css" />
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css" />
   <script async src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"></script>
+  <script src="bower_components/lightgallery.js/dist/js/lightgallery.js"></script>
+   <script src="bower_components/lightgallery.js/dist/js/lightgallery.min.js"></script>
+   <script src="js/lg-fullscreen.min.js"></script>
   <div id="snipcart" data-api-key="ZjgyNjkwMDAtNGM3MS00ODA5LTgyNjEtMDA4YzVjY2E3MGJmNjM3NzM1OTQ4Mzk2Nzg5Nzkx" hidden></div>
 </html>
