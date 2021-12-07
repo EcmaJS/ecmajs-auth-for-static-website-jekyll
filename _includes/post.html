@@ -6,7 +6,10 @@
     {{ post.description }}
   </div>
   <div class="post-buttons__container">
-    <a class="contain__button" href="{{ post.link }}">Открыть запись</a>
+    <div class="container__left-buttons">
+      <a class="contain__button" href="{{ post.link }}">Содержимое</a>
+      <a class="contain__button" href="{{ post.descriptionLink }}">Описание</a>
+    </div>
     {% if post.isNotFree %}
       {% include buybtn.html %}
     {% endif %}
