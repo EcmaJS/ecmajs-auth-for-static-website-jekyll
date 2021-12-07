@@ -6,10 +6,10 @@ layout: post-content
   Welcome!
   <div id="lightgallery">
     <a href="images/1.jpg">
-        <img src="images/1.jpg" />
+      <img src="images/thumb-1.jpg" />
     </a>
     <a href="images/1.jpg">
-        <img src="images/1.jpg" />
+      <img src="images/thumb-1.jpg" />
     </a>
 </div>
 </body>
