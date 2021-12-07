@@ -235,3 +235,24 @@ input {
   align-items: center;
   justify-content: space-between;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery > a {
+  border: 1px solid #333;
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 300px;
+  min-height: 300px;
+  margin: 10px;
+}
+
+.gallery > a > img {
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 300px;
+  min-height: 300px;
+}
