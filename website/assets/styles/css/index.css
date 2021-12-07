@@ -242,12 +242,17 @@ input {
 }
 
 .gallery > a {
-  border: 1px solid #333;
+  filter: blur(1px);
+  box-shadow: 4px 4px 21px 0px rgba(34, 60, 80, 0.2);
   max-width: 200px;
   min-width: 200px;
   max-height: 300px;
   min-height: 300px;
   margin: 10px;
+}
+
+.gallery > a:hover {
+  transform: scale(1.1);
 }
 
 .gallery > a > img {
