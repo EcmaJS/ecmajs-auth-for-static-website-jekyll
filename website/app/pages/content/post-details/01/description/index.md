@@ -1,6 +1,5 @@
 ---
-layout: default
+layout: description
 ---
-{% include description.html %}
 {{ post.title }}
 {{ post.description }}
