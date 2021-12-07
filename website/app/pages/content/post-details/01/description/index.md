@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <div>
   Some description
   {{ post.title }}
