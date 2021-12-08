@@ -264,7 +264,7 @@ input {
   min-height: 300px;
 }
 
-plug-page > html {
+.plug-page__html {
   height: 100%;
 }
 
