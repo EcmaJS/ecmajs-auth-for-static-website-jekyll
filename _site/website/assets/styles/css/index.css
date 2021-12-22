@@ -235,3 +235,54 @@ input {
   align-items: center;
   justify-content: space-between;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery > a {
+  box-shadow: 4px 4px 21px 0px rgba(34, 60, 80, 0.2);
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 300px;
+  min-height: 300px;
+  margin: 10px;
+  transition: .4s;
+}
+
+.gallery > a:hover {
+  transition: .4s;
+  transform: scale(1.05);
+}
+
+.gallery > a > img {
+  filter: blur(0.4px);
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+.plug-page__html {
+  height: 100%;
+}
+
+.plug-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plug-body > a {
+  background: #1a4db3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+}
