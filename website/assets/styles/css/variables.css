@@ -16,8 +16,13 @@
 
   --box-shadow-form: 0 2px 5px 0 rgb(0 0 0 / 26%);
 
-  /*Fonts*/
+  /*Font-styles*/
   --main-font-style: 'Open Sans', sans-serif;
 
+  /*Font sizes*/
+
+  --font-size-title: 30px;
+
+  /*Font weights*/
   --font-weight-light: 100;
 }
