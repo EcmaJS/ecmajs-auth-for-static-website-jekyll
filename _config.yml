@@ -6,3 +6,6 @@ author: EcmaJS
 google_analytics: UA-212804240-2
 plugins:
   - jekyll-seo-tag
+
+contents_root_path: /website/
+contents_pages_path: /website/app/pages/

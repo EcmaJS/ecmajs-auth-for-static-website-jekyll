@@ -1,16 +1,16 @@
 <div class="note">
   <div class="note__title">
-    {{ post.title }}
+    {{ post.global.title }}
   </div>
   <div class="note__description">
-    {{ post.description }}
+    {{ post.card-info.description }}
   </div>
   <div class="post-buttons__container">
     <div class="container__left-buttons">
-      <a class="btn" href="{{ post.link }}">Содержимое</a>
-      <a class="btn" href="{{ post.descriptionLink }}">Описание</a>
+      <a class="btn" href="{{ post.card-info.link }}">Содержимое</a>
+      <a class="btn" href="{{ post.card-info.descriptionLink }}">Описание</a>
     </div>
-    {% if post.isNotFree %}
+    {% if post.card-info.isNotFree %}
       {% include buybtn.html %}
     {% endif %}
   </div>
