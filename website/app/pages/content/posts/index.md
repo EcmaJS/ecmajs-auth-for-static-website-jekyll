@@ -2,6 +2,7 @@
 layout: default
 permalink: /posts
 title: Posts
+breadcrumbs-title: Posts
 ---
 {% for post_hash in site.data.posts %}
 {% assign post = post_hash[1] %}

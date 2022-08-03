@@ -2,6 +2,7 @@
 layout: post/description
 permalink: /posts/01/
 title: '01'
+breadcrumbs-title: '01'
 ---
 <div class="description__text-block">
   <div class="description__title">{{site.data.posts.post-1.global.title}}</div>
