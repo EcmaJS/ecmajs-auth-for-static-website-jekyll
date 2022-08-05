@@ -1,0 +1,23 @@
+breadcrumbs-title: Post 1
+global: 
+  title: Post 1
+card-info:
+  identifier: post-1
+  description: Доступ ограничен - только через код
+  link: /posts/01/details
+  descriptionLink: /posts/01/
+  isNotFree: true
+snipcart-info:
+  itemId: 0001
+  itemPrice: 1
+  itemFileGuid: ff4eef2b-8c2b-4481-8886-fe2fd7df69e4
+  itemDescription: First document
+  itemImage: ./images/1.jpg
+  itemName: Document
+details-info:
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare scelerisque sapien vitae mattis. Nunc justo ligula, vestibulum vel gravida nec, fringilla aliquet libero. Nullam libero ex, porta sit amet ante a, commodo hendrerit eros. Cras nulla metus, malesuada nec vulputate ut, convallis sit amet est. Pellentesque quis ligula ut felis suscipit elementum. Praesent suscipit ipsum dolor, vitae mollis massa gravida nec. Aliquam erat volutpat. Nulla ultricies venenatis diam.
+  images-paths: [
+    '/contents/pages/posts/01/images/doc-1.jpg',
+    '/contents/pages/posts/01/images/doc-1.jpg',
+    '/contents/pages/posts/01/images/doc-1.jpg'
+  ]

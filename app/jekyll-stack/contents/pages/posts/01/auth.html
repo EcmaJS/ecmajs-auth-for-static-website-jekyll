@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="auth-form_html-container" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authorization before reading a post</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/verifyRequest.min.js"></script>
+    <script src="https://kit.fontawesome.com/3ddd0feda7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/styles/css/index.css">
+    <link rel="stylesheet" href="/assets/styles/css/variables.css" />
+  </head>
+  <body class="auth-form__body" onload="initEvent()">
+    <div class="authForm" id="authForm">
+      <div class='title'>Авторизация</div>
+      <input placeholder="Электронная почта" required id='emailAuth'></input>
+      <input placeholder="Токен покупки" required id='tokenAuth'></input>
+      <button id="auth-go-to" class="btn" onclick="checkRequest('/posts/01/details')">Вход</button>
+    </div>
+  </body>
+</html>

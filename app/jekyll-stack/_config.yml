@@ -1,0 +1,18 @@
+#theme:
+title: Website
+description: ecmajs-auth-for-static-website-jekyll
+url: https://ecmajs.github.io
+author: EcmaJS
+google_analytics: UA-212804240-2
+plugins:
+  - jekyll-seo-tag
+
+source: ./
+
+destination: ../app-build-static
+
+layouts_dir: ./templates/_layouts/
+
+contents_root_path: /contents/
+contents_pages_path: /contents/pages/
+
