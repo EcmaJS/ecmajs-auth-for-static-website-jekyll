@@ -1,11 +1,14 @@
 #theme:
-title: Website
+title: SAIFAS Legal
 description: ecmajs-auth-for-static-website-jekyll
 url: https://ecmajs.github.io
 author: EcmaJS
+lang: eu
 google_analytics: UA-212804240-2
 plugins:
   - jekyll-seo-tag
+
+theme: jekyll-theme-saifas-it
 
 source: ./
 
@@ -16,3 +19,6 @@ layouts_dir: ./templates/_layouts/
 contents_root_path: /contents/
 contents_pages_path: /contents/pages/
 
+layout:
+  footer:
+    contact_us: true

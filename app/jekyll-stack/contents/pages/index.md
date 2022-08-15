@@ -1,6 +1,6 @@
 ---
-layout: start
+layout: default
 title: Home
-breadcrumbs-title: Home page
 permalink: /
 ---
+{% include items/button.html text="Posts" href="./posts"%}
