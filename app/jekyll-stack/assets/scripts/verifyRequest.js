@@ -50,6 +50,7 @@ async function checkData(itemId, backUrl) {
         const result = await request.json();
         if (existingOrders.find(elem => elem.token == result.token)) {
           console.log('Page has been loaded!');
+          hideLoader();
         }
         else {
           window.location.href = backUrl;
@@ -63,4 +64,12 @@ async function checkData(itemId, backUrl) {
   else {
     window.location.href = backUrl;
   }
+}
+
+function hideLoader() {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
 }
